@@ -20,7 +20,7 @@ If the API receives a payload of:
 }
 ```
 
-It should respond with a payload of:
+It should respond with a payload of (note: this is just an example, your results may be different depending on the data available from the API at the time.):
 
 ```
 {
