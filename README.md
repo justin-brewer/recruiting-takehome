@@ -107,3 +107,4 @@ To see all robots:
 - Optimize for loads to be delivered with enough remaining battery for robots to reach a charging station, unassisted.
 - Add UI with scatter plot of assets before and after deliveries and send load requests.
 - Color-code assets on scatter plot to identify robots, loads, charging stations with a color spectrum for robots to indicate battery levels.
+- Modify Dockerfile to build executable in a separate container and just run the executable in a runtime container without the SDK for a lighter weight container.
