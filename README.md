@@ -1,5 +1,5 @@
 # SVT Robotics - .NET Core Take Home Recruiting Assessment
-##\*See bottom for instructions to run.
+## \*See bottom for instructions to run.
 
 One of SVT's microservices calculates which robot should transport a pallet from point A to point B based on which robot is the closest and has the most battery left if there are multiple in the proximity of the load's location. You'll use a provided API endpoint to create a simplified robot routing API.
 
@@ -68,20 +68,24 @@ $ ./docker.sh
 `
 - POST {\<Load\>}
 - Test tool included ./test/post.sh
+
 `
   $ cd test
 `
+
 `
   $ . post.sh
 `
+
 `
 $ post <loadId> <x> <y> 
 ` // https
+
 `
 $ posti <loadId> <x> <y> 
 ` // http
 ### Windows
-\* Experimental (only tested on MACOS 10.15.7)
+\* Experimental (only tested on MACOS 10.15.7, but should work)
 
 \> ./docker.cmd
 
@@ -89,7 +93,9 @@ $ posti <loadId> <x> <y>
 
 ### Any Platform (once running)
 To see all robots:
+
 \* GET https://localhost:5001/api/robots/closest
+
 \* GET http://localhost:5000/api/robots/closest
 
 
