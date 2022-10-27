@@ -1,4 +1,5 @@
 # SVT Robotics - .NET Core Take Home Recruiting Assessment
+##\*See bottom for instructions to run.
 
 One of SVT's microservices calculates which robot should transport a pallet from point A to point B based on which robot is the closest and has the most battery left if there are multiple in the proximity of the load's location. You'll use a provided API endpoint to create a simplified robot routing API.
 
@@ -46,3 +47,57 @@ Deliverables Checklist
 3. Repo README has instructions for running and testing the API
 4. Repo README has information about what you'd do next, per above requirements
 5. Create a new GitHub repo and share it with teresa@svtrobotics.com
+
+# Prerequisites
+## Run Locally
+- dotnet sdk 6.0
+## Run in Docker
+- Docker Desktop (running)
+# How to Run
+## Locally
+- (from command line, in project root)
+`
+$ dotnet run
+`
+- POST {\<Load\>}
+## Docker
+- (from commanad line, in project root)
+### MACOS/Linux/UNIX/BSD
+`
+$ ./docker.sh
+`
+- POST {\<Load\>}
+- Test tool included ./test/post.sh
+`
+  $ cd test
+`
+`
+  $ . post.sh
+`
+`
+$ post <loadId> <x> <y> 
+` // https
+`
+$ posti <loadId> <x> <y> 
+` // http
+### Windows
+\* Experimental (only tested on MACOS 10.15.7)
+
+\> ./docker.cmd
+
+- POST {\<Load\>}
+
+### Any Platform (once running)
+To see all robots:
+\* GET https://localhost:5001/api/robots/closest
+\* GET http://localhost:5000/api/robots/closest
+
+
+# Next Steps
+- Add support for request to include delivery location for load.
+- Determine battery required for robot to travel to load and deliver it to its destination.
+- Add support for batch loads, returning robotIds for each load.
+- Add locations of robot charging stations.
+- Optimize for loads to be delivered with enough remaining battery for robots to reach a charging station, unassisted.
+- Add UI with scatter plot of assets before and after deliveries and send load requests.
+- Color-code assets on scatter plot to identify robots, loads, charging stations with a color spectrum for robots to indicate battery levels.
