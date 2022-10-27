@@ -91,7 +91,7 @@ $ posti <loadId> <x> <y>
 
 - POST {\<Load\>}
 
-\* Ctrl-C will stop the docker container and delete it since it was started with the -d option. Just run the scrilpt again to build/restart it. It will go much faster on subsequent runs because the image is already built.
+\* Ctrl-C will stop the docker container and delete it since it was started with the -d option. Just run the script again to build/restart it. It will go much faster on subsequent runs because the image is already built.
 
 ### Any Platform (once running)
 To see all robots:
